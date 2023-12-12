@@ -3,13 +3,14 @@ html{
 }
 
 body{
-    background: hsla(309, 100%, 50%, 1);
-    background: linear-gradient(135deg, hsla(309, 100%, 50%, 1) 22%, hsla(190, 100%, 33%, 1) 100%);
-    background: -moz-linear-gradient(135deg, hsla(309, 100%, 50%, 1) 22%, hsla(190, 100%, 33%, 1) 100%);
-    background: -webkit-linear-gradient(135deg, hsla(309, 100%, 50%, 1) 22%, hsla(190, 100%, 33%, 1) 100%);
-    filter: progid: DXImageTransform.Microsoft.gradient( startColorstr="#FF01D7", endColorstr="#008BA7", GradientType=1 );
+    background: rgb(29, 28, 28);
     background: no-repeat cover;
+    color: white;
 }
+
+html::-webkit-scrollbar {
+    display: none;
+  }
 
 .navbar{
     height: 25%;
@@ -22,7 +23,7 @@ body{
 .navbar a{
     font-family: 'Rubik', sans-serif;
     font-size: large;
-    color: black;
+    color: white;
     text-decoration: none;
     padding: 5px;
     margin-left: 0px;
@@ -31,7 +32,7 @@ body{
 }
 
 .navbar a:hover{
-    background-color: #04d5ff;
+    background-color: #363636;
 }
 
 .card {
@@ -41,9 +42,10 @@ body{
     text-align: center;
     border: 1px solid black;
     border-radius: 8px;
-    background-color: #FAF9F6;
+    background-color: #000000;
     transition: 0.2s;
     margin: 2px;
+    color: white;
 }
 
 .card img {
@@ -62,6 +64,9 @@ body{
     /* border: 1px solid black; */
     margin-top: 1px;
     margin-bottom: 0;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
 }
 
 .artist {
@@ -74,11 +79,40 @@ body{
 }
 
 .card:hover{
-    width: 150px;
-    height: 155px;
     cursor: pointer;
+    background-color: #363636;
 }
 
 .card-con{
     display: flex;
+}
+
+.swiper{
+    border: 1px white solid;
+    height: 550px;
+    justify-content: center;
+    align-items: center;
+}
+
+.swiper-slide {
+    text-align: center;
+    font-size: 18px;
+    background: #181818;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.swiper-slide img {
+    display: block;
+    object-fit: cover;
+    width: inherit;
+    align-items: center;
+    border: white 1px solid;
+}
+
+.swiper-scrollbar{
+    color: white;
+    --swiper-scrollbar-bg-color: rgba(65, 65, 65, 0.1);
+    --swiper-scrollbar-drag-bg-color: rgba(255, 255, 255, 0.5);
 }

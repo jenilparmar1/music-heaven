@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -7,8 +8,10 @@
     <link rel="stylesheet" href="style.css">
     <style>
         @import url('https://fonts.googleapis.com/css2?family=Rubik:wght@500&display=swap');
-      </style>
+    </style>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
 </head>
+
 <body>
     <div class="navbar">
         <a href="#">home</a>
@@ -17,19 +20,70 @@
         <a href="#">artists</a>
     </div>
 
-    <div class="card-con">
-    <div class="card">
-        <img src="./images/The Divine Feminine by Mac Miller.jpeg" alt="Song Image">
-        <h2 class="title">Devine Feminine</h2>
-        <p class="artist">mac miller</p>
+    <div class="swiper mySwiper">
+        <div class="swiper-wrapper">
+            <div class="swiper-slide"><img src="./images/3931.jpg" alt=""></div>
+            <div class="swiper-slide"><img src="./images/8278.jpg" alt=""></div>
+            <div class="swiper-slide"><img src="./images/7859666.jpg" alt=""></div>
+            <div class="swiper-slide"><img src="./images/Awesome Playboi Carti PC Wallpapers - WallpaperAccess.png" alt=""></div>
+            <div class="swiper-slide"><img src="./images/Frank Ocean - Blond [2560x1440] _ Frank ocean wallpaper, Ocean wallpaper, Frank ocean.jpg" alt=""></div>
+            <div class="swiper-slide"><img src="/images/HD wallpaper_ Music, J Cole.jpg" alt=""></div>
+            <div class="swiper-slide"><img src="/images/wp2666605-mac-miller-wallpaper.jpg" alt=""></div>
+            <div class="swiper-slide"><img src="/images/ye.jpg" alt=""></div>
+        </div>
+        <div class="swiper-scrollbar"></div>
     </div>
 
-    <div class="card">
-        <img src="./images/blonde.jpeg" alt="Song Image">
-        <h2 class="title">blonde</h2>
-        <p class="artist">frank ocean</p>
+    <div class="card-con">
+        <div class="card">
+            <img src="./images/The Divine Feminine by Mac Miller.jpeg" alt="Song Image">
+            <h2 class="title">Devine Feminine</h2>
+            <p class="artist">mac miller</p>
+        </div>
+        <div class="card">
+            <img src="./images/blonde.jpeg" alt="Song Image">
+            <h2 class="title">blonde</h2>
+            <p class="artist">frank ocean</p>
+        </div>
+        <div class="card">
+            <img src="./images/Creepin' (with The Weeknd & 21 Savage).jpeg" alt="Song Image">
+            <h2 class="title" title="HEROES & VILLAINS">HEROES & VILLAINS</h2>
+            <p class="artist">metro boomin</p>
+        </div>
+        <div class="card">
+            <img src="./images/f27902eb1acc2a73ec5f94a4741b78ca.jpg" alt="Song Image">
+            <h2 class="title">Die Lit</h2>
+            <p class="artist">playboi carti</p>
+        </div>
+        <div class="card">
+            <img src="./images/SZA - SOS (Vinyl).jpeg" alt="Song Image">
+            <h2 class="title">SOS</h2>
+            <p class="artist">SZA</p>
+        </div>
+        <div class="card">
+            <img src="./images/TV Girl - Who Really Cares (2016) [1000 x 1008].jpeg"
+                alt="Song Image">
+            <h2 class="title">Who Really Cares</h2>
+            <p class="artist">TV Girl</p>
+        </div>
     </div>
-</div>
-    <script src="script.js"></script>
+    
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <script>
+        var swiper = new Swiper(".mySwiper", {
+            mousewheel: true,
+            autoplay: {
+                delay: 3500,
+                disableOnInteraction: false,
+            },
+            scrollbar: {
+            el: ".swiper-scrollbar",
+            hide: true,
+            draggable: true,
+            snapOnRealease: true,
+            },
+        });
+    </script>
 </body>
+
 </html>
