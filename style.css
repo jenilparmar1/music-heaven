@@ -34,4 +34,51 @@ body{
     background-color: #04d5ff;
 }
 
+.card {
+    width: 140px;
+    height: 150px;
+    padding: px;
+    text-align: center;
+    border: 1px solid black;
+    border-radius: 8px;
+    background-color: #FAF9F6;
+    transition: 0.2s;
+    margin: 2px;
+}
 
+.card img {
+    width: auto;
+    height: 100px;
+    border-radius: 10px;
+    margin-top: 5px;
+    border: 1px black solid;
+}
+
+.title {
+    font-size: 15px;
+    font-weight: bold;
+    font-family: 'Rubik', sans-serif;
+    text-align: center;
+    /* border: 1px solid black; */
+    margin-top: 1px;
+    margin-bottom: 0;
+}
+
+.artist {
+    font-size: 11px;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    text-align: center;
+    /* border: 1px solid black; */
+    margin-top: 0;
+    margin-bottom: 0;
+}
+
+.card:hover{
+    width: 150px;
+    height: 155px;
+    cursor: pointer;
+}
+
+.card-con{
+    display: flex;
+}
