@@ -1,8 +1,10 @@
-html{
+@import url('https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css');
+
+html {
     height: 100vh;
 }
 
-body{
+body {
     background: rgb(29, 28, 28);
     background: no-repeat cover;
     color: white;
@@ -10,9 +12,9 @@ body{
 
 html::-webkit-scrollbar {
     display: none;
-  }
+}
 
-.navbar{
+.navbar {
     height: 25%;
     width: 100%;
     display: flex;
@@ -20,7 +22,7 @@ html::-webkit-scrollbar {
     position: relative;
 }
 
-.navbar a{
+.navbar a {
     font-family: 'Rubik', sans-serif;
     font-size: large;
     color: white;
@@ -31,14 +33,14 @@ html::-webkit-scrollbar {
     border-radius: 2px;
 }
 
-.navbar a:hover{
+.navbar a:hover {
     background-color: #363636;
 }
 
 .card {
-    width: 140px;
-    height: 150px;
-    padding: px;
+    box-sizing: border-box;
+    height: 165px;
+    width: 175px;
     text-align: center;
     border: 1px solid black;
     border-radius: 8px;
@@ -46,14 +48,23 @@ html::-webkit-scrollbar {
     transition: 0.2s;
     margin: 2px;
     color: white;
+    margin-left: 0;
+    /* Remove left margin for the first card */
+    margin-right: 5px;
+    /* Add right margin for all cards */
+}
+
+.card:first-child {
+    margin-left: 5px;
+    /* Apply left margin to subsequent cards */
 }
 
 .card img {
     width: auto;
     height: 100px;
     border-radius: 10px;
-    margin-top: 5px;
-    border: 1px black solid;
+    margin-top: 10px;
+    border: 1px solid black;
 }
 
 .title {
@@ -61,12 +72,14 @@ html::-webkit-scrollbar {
     font-weight: bold;
     font-family: 'Rubik', sans-serif;
     text-align: center;
-    /* border: 1px solid black; */
-    margin-top: 1px;
+    /* border: 1px solid white; */
+    margin-top: 5px;
     margin-bottom: 0;
     overflow: hidden;
     white-space: nowrap;
     text-overflow: ellipsis;
+    /* padding: 2px; */
+    width: 175px;
 }
 
 .artist {
@@ -76,18 +89,25 @@ html::-webkit-scrollbar {
     /* border: 1px solid black; */
     margin-top: 0;
     margin-bottom: 0;
+    width: 175px;
 }
 
-.card:hover{
+.card:hover {
     cursor: pointer;
     background-color: #363636;
 }
 
-.card-con{
+.card-con {
     display: flex;
+    overflow-x: scroll;
+    width: 100%;
 }
 
-.swiper{
+.card-con::-webkit-scrollbar {
+    display: none;
+}
+
+.swiper {
     border: 1px white solid;
     height: 550px;
     justify-content: center;
@@ -97,10 +117,11 @@ html::-webkit-scrollbar {
 .swiper-slide {
     text-align: center;
     font-size: 18px;
-    background: #181818;
+    background: rgba(0, 0, 0, 0.267);
     display: flex;
     justify-content: center;
     align-items: center;
+    cursor: pointer;
 }
 
 .swiper-slide img {
@@ -111,8 +132,62 @@ html::-webkit-scrollbar {
     border: white 1px solid;
 }
 
-.swiper-scrollbar{
+.swiper-slide::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.479);
+    /* Adjust the shadow color and opacity */
+    pointer-events: none;
+    /* Allows interaction with the image */
+    z-index: 1;
+    /* Ensure the shadow is behind the image */
+}
+
+.swiper-scrollbar {
     color: white;
     --swiper-scrollbar-bg-color: rgba(65, 65, 65, 0.1);
     --swiper-scrollbar-drag-bg-color: rgba(255, 255, 255, 0.5);
+}
+
+.title-container {
+    /* border: white 1px solid; */
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    font-size: 12px;
+}
+
+.title-container::after {
+    content: '';
+    position: absolute;
+    margin-top: -12px;
+    width: 85px;
+    height: 2px;
+    /* Adjust the thickness of the line */
+    background-color: rgba(234, 22, 22, 0.842);
+    /* Adjust line color */
+}
+
+.card-buttons {
+    display: flex;
+    align-items: center;
+}
+
+.arrow-btn {
+    background: none;
+    border: none;
+    font-size: 20px;
+    cursor: pointer;
+    outline: none;
+    color: white;
+    /* border: 1px solid white; */
+    height: 150px;
+    border-radius: 5px;
+    transition: 2ms linear smooth;
+}
+
+.arrow-btn:hover{
+    background-color: #363636;
 }
