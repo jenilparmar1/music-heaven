@@ -1,0 +1,57 @@
+@import url('https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css');
+
+html {
+    height: 100%;
+    width: 100%;
+}
+
+body {
+    background: rgb(29, 28, 28);
+    background: no-repeat cover;
+    color: white;
+}
+
+html::-webkit-scrollbar {
+    display: none;
+}
+
+.navbar {
+    height: 35px;
+    width: 101%;
+    display: flex;
+    border: 1px solid rgb(0, 0, 0);
+    position: relative;
+    margin-left: -8px;
+    margin-top: -8px;
+    background-color: black;
+    padding: 5px;
+}
+
+.navbar a {
+    font-family: 'Rubik', sans-serif;
+    font-size: 20px;
+    color: white;
+    text-decoration: none;
+    padding: 5px;
+    margin-left: 0px;
+    transition: 0.2s linear;
+    border-radius: 2px;
+}
+
+.navbar a:hover {
+    background-color: #363636;
+}
+.playlist{
+    border: 1px solid white;
+    background-color: black;
+    display: flex;
+    margin: 5px;
+    border-radius: 5px;
+}
+
+.playlist img{
+    height: 125px;
+    padding: 10px;
+    border: 1px solid black;
+    border-radius: 5px;
+}
