@@ -5,6 +5,7 @@ function openForm(){
 
     if (!formVisible) {
         form.style.height = form.scrollHeight + "px";
+        formVisible = true;
     } else {
         form.style.height = "0";
     }
